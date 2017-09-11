@@ -1,2 +1,2 @@
-# Graphics
-For my graphics class
+# Rails
+For trying to run rails in
