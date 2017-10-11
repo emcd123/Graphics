@@ -4,7 +4,7 @@ Game.delete_all
 Game.create!(title: 'Shovel Knight:Treasure Trove',
 	year: 2017,
 	developer: 'Yacht Club Games',
-	genre: 'Platformer',
+	gnere: 'Platformer',
 	rating: 4.5,
 	review:
 		%{<p>
@@ -18,7 +18,7 @@ Game.create!(title: 'Shovel Knight:Treasure Trove',
 Game.create!(title: 'Legend of Zelda:Breath of the Wild',
 	year: 2017,
 	developer: 'Nintendo',
-	genre: 'Adventure',
+	gnere: 'Adventure',
 	rating: 5.0,
 	review:
 		%{<p> Step into a world of adventure

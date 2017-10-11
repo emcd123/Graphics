@@ -3,27 +3,35 @@
 <h1>Listing Games</h1>
 
 <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Developer</th>
+      <th>Platform</th>
+      <th>Genre</th>
+      <th>Rating</th>
+      <th>Description</th>
+      <th>Box art url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
   <tbody>
     <% @games.each do |game| %>
-      <%= content_tag :tr, class: cycle('list_line_odd', 					'list_line_even') do %>
-  			<td>
-    			<%= image_tag(game.box_art_url, class: 'list_image') %>
-  			</td>
-
-
+      <tr>
         <td><%= game.title %></td>
         <td><%= game.year %></td>
         <td><%= game.developer %></td>
+        <td><%= game.platform %></td>
         <td><%= game.genre %></td>
         <td><%= game.rating %></td>
-        <td><%= game.review %></td>
-        <td><%= game.store_url %></td>
+        <td><%= game.description %></td>
         <td><%= game.box_art_url %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
+      </tr>
     <% end %>
   </tbody>
 </table>
