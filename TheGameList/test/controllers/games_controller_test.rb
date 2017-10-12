@@ -18,7 +18,7 @@ class GamesControllerTest < ActionController::TestCase
 
   test "should create game" do
     assert_difference('Game.count') do
-      post :create, game: { box_art_url: @game.box_art_url, description: @game.description, developer: @game.developer, genre: @game.genre, platform: @game.platform, rating: @game.rating, title: @game.title, year: @game.year }
+      post :create, game: { box_art_url: @game.box_art_url, description: @game.description, developer: @game.developer, genre: @game.genre, platform: @game.platform, rating: @game.rating, title: "New Game", year: @game.year }
     end
 
     assert_redirected_to game_path(assigns(:game))
