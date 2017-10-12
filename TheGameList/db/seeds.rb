@@ -26,4 +26,4 @@ Game.create!(title: 'Legend of Zelda:Breath of the Wild',
 
 				Forget everything you know about The Legend of Zelda games. 				Step into a world of discovery, exploration and adventure in 					The Legend of Zelda: Breath of the Wild, a boundary-breaking 					new game in the acclaimed series. Travel across fields, 				through forests and to mountain peaks as you discover what 					has become of the ruined kingdom of Hyrule in this stunning 				open-air adventure. 
 			</p>},	
-	box_art_url: 'zeldabotw.jpg')
+	box_art_url: 'zeldabotw.jepg')

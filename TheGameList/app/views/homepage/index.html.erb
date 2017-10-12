@@ -1,0 +1,18 @@
+<h1>Homepage#index</h1>
+
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Current Nintendo Switch Titles</h1>
+
+<% @games.each do |game| %>
+  <div class="entry">
+    <%= image_tag(game.box_art_url) %>
+    <h3><%= game.title %></h3>
+    <%= sanitize game.description %>
+    <div class="year_line">
+      <span class="Year"><%= game.year %></span>
+    </div>
+  </div>
+<% end %>
