@@ -1,7 +1,7 @@
 # The Game List
 
-## Rails Version: 4.2.9
-## Ruby Version: 2.4.2
+###### Rails Version: 4.2.9
+###### Ruby Version: 2.4.2
 
 
 A website written in ruby on rails which lists the current games on popular games platforms.
