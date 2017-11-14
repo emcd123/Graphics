@@ -18,10 +18,9 @@ class LineItemsControllerTest < ActionController::TestCase
 
   test "should create line_item" do
     assert_difference('LineItem.count') do
-      post :create, line_item: { game_id: @line_item.game_id, wishlist_id: @line_item.wishlist_id }
-    end
-
-    assert_redirected_to line_item_path(assigns(:line_item))
+    post :create, game_id: games(:ruby)
+   end
+    assert_redirected_to wishlist_path(assigns(:line_item).wishlist)
   end
 
   test "should show line_item" do

@@ -19,3 +19,15 @@ two:
   rating: 9.99
   description: MyString
   box_art_url: MyString.jpg
+
+ruby:
+  title: Game3
+  year: 2017
+  developer: MyString
+  platform: MyString
+  genre: MyString
+  rating: 9.99
+  description: MyString
+  box_art_url: MyString.jpg
+
+

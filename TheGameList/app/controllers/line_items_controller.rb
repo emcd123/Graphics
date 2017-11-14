@@ -27,7 +27,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     game = Game.find(params[:game_id])
-    @line_item = @wishlist.line_items.build(game: game) 
+    @line_item = @wishlist.add_game(game.id)
 
     respond_to do |format|
       if @line_item.save

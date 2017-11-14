@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'faq/index'
+
   resources :line_items
   resources :wishlists
   get 'homepage/index'
@@ -10,7 +12,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 	root :to => 'homepage#index', :as => 'homepage'
-  # Example of regular route:
+  #get 'faq#index'=> 'faq'
+   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

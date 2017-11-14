@@ -19,11 +19,11 @@
       <li><%= link_to "Home", homepage_path %></li>
 			<li><a href="http://www..../comingsoon">Coming Soon</a></li>
 			<li><a href="http://www..../news">News</a></li>
-			<li><a href="http://www..../contact">Contact</a></li>
+			<li><%= link_to "FAQ", faq_index_path %></li>
 				</ul>
 			</div>
 			<div id="main">
-      <%= button_to 'Go to Wishlist' %>
+      <%= button_to 'Go to Wishlist'%>
 				<%= yield %>
 			</div>
 		</div>

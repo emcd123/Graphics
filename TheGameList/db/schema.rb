@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113230745) do
+ActiveRecord::Schema.define(version: 20171114225753) do
 
   create_table "games", force: :cascade do |t|
     t.string   "title"
@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 20171113230745) do
   create_table "line_items", force: :cascade do |t|
     t.integer  "game_id"
     t.integer  "wishlist_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "quantity",    default: 1
   end
 
   add_index "line_items", ["game_id"], name: "index_line_items_on_game_id"
