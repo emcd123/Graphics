@@ -1,0 +1,10 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Your Wishlist</h2>
+<ul>
+  <% @wishlist.line_items.each do |item| %>
+    <li><%= item.game.title %></li>
+  <% end %>
+</ul>

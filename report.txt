@@ -1,0 +1,51 @@
+Task 1
+
+----> Whats your app?
+
+A list of current and upcoming games on nintendo consoles
+	--->games table
+		-->title: string
+		-->year: integer
+		-->developer: string
+		-->platform: string
+		-->genre: string
+		-->rating: decimal
+		-->description: string
+		-->box_art_url: image
+		
+Task 2
+
+----> Are you watertight?
+
+Added validators for year, title, developer, genre, box_art_url
+	---> To ensure each of those are present
+
+Aded validator for year
+	---> That says that ensure a games release date is after 2010 as that was the release year for the applicable console
+
+Used validator on rating to ensure it will have one decimal place
+
+And added a validators that check is the box art url links to an image
+
+
+Performed unit testing on the entries in the games table
+
+-->All works as expected
+
+
+Task 3
+----> What's your style?
+
+Created a new comtroller and view called homepage for my website
+---> Havent achieved much in designing a nice UI due to current lack of css knowledge, so focusing my efforts on learning that
+
+---> Added a banner logo and sized it appropriately. Still a working banner, the photo is too stratched,may change 
+
+--->Decided on format for displaying the list of games stored in the table
+
+--->Want to turn the list of links either into a horizontal list or into a side bar.
+
+---> Want to make the links stand out more from the rest of the page
+
+
+

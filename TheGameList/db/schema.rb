@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011101111) do
+ActiveRecord::Schema.define(version: 20171113230745) do
 
   create_table "games", force: :cascade do |t|
     t.string   "title"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20171011101111) do
     t.string   "box_art_url"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "wishlist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "line_items", ["game_id"], name: "index_line_items_on_game_id"
+  add_index "line_items", ["wishlist_id"], name: "index_line_items_on_wishlist_id"
+
+  create_table "wishlists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

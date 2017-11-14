@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,15 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170920103925) do
+ActiveRecord::Schema.define(version: 20171109170239) do
 
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "image_url"
-    t.decimal "price", precision: 8, scale: 2
+  create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+# Could not dump table "line_items" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "email"
+    t.string   "pay_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.decimal  "price",       precision: 8, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end

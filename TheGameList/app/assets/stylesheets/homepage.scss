@@ -4,11 +4,12 @@
 
 .homepage {
 	h1 {
-		margin: 0;
+		margin-left: 200px;
 		padding-bottom: 0.5em;
 		font: 150% sans-serif;
-		color: #226;
-		border-bottom: 3px dotted #77d;
+		font-weight: bold;
+		/*color: #226;*/
+		border-bottom: 3px solid ;
 	}
 	/* An entry in the store catalog */
 	.entry {
@@ -18,8 +19,10 @@
 		min-height: 100px;
 
 		img {
-			width: 80px;
+			width: 400px;
+			height: 130px;
 			margin-right: 5px;
+			margin-left: 200px;
 			margin-bottom: 5px;
 			position: absolute;
 		}
@@ -27,23 +30,29 @@
 		h3 {
 			font-size: 120%;
 			font-family: sans-serif;
-			margin-left: 100px;
+			margin-left: 620px;
 			margin-top: 0;
 			margin-bottom: 2px;
-			color: #227;
 		}
 
-		p, div.year_line {
-			margin-left: 100px;
+		p, div.year_line{
+			margin-left: 620px;
 			margin-top: 0.5em;
 			margin-bottom: 0.8em;
+      form, div {
+         display: inline;
+      }
 		}
-
+		div.year_line{
+			margin-left: 620px;
+			margin-top: 0.5em;
+			margin-bottom: 0.8em;
+			font-weight: bold;
+		}
 		.year {
 			color: #44a;
 			font-weight: bold;
 			margin-right: 3em;
 		}
-
 	}
 }

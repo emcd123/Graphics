@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 
+	<body style = "background-color: #f3bebe">
 	<%= content_tag :body, class: controller.controller_name do %>
-		<%= yield %>
+	<div id="banner">
+  	<%= image_tag("logo.png", height: 300, width: 1250) %>
+  	<%= @page_title || "The GameList" %>
+	</div>	
+		<div id="columns">
+			<div id="side">
+				<ul>
+      <li><%= link_to "Home", homepage_path %></li>
+			<li><a href="http://www..../comingsoon">Coming Soon</a></li>
+			<li><a href="http://www..../news">News</a></li>
+			<li><a href="http://www..../contact">Contact</a></li>
+				</ul>
+			</div>
+			<div id="main">
+      <%= button_to 'Go to Wishlist' %>
+				<%= yield %>
+			</div>
+		</div>
 	<% end %>
 
 </html>
