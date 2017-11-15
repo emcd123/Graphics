@@ -1,4 +1,8 @@
 <tr>
-  <td><%= line_item.game.title %></td>
-  <td><%= line_item.game.box_art_url %></td>
+  <div class="entry">
+    <h3><%= line_item.game.title %></h3>
+    <%= image_tag(line_item.game.box_art_url) %>
+ 
+  <%= button_to 'Empty Row', @wishlist, method: :delete,
+      data: { confirm: 'Are you sure?' } %>
 </tr>

@@ -1,3 +1,44 @@
 // Place all the styles related to the yourlist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.yourlist {
+	h1 {
+		margin-left: 200px;
+		padding-bottom: 0.5em;
+		font: 150% sans-serif;
+		font-weight: bold;
+		/*color: #226;*/
+	}
+	/* An entry in the rendered wishlist*/
+	.entry {
+		overflow: auto;
+		margin-top: 1em;
+		min-height: 100px;
+
+		img {
+			width: 400px;
+			height: 160px;
+			margin-right: 5px;
+			margin-left: 4px;
+			margin-bottom: 5px;
+			position: left;
+		}
+
+		h4 {
+			font-size: 120%;
+			font-family: sans-serif;
+			margin-left: 620px;
+			margin-top: 0;
+			margin-bottom: 2px;
+		}
+
+		p, div.year_line{
+			margin-left: 620px;
+			margin-top: 0.5em;
+			margin-bottom: 0.8em;
+      form, div {
+         display: inline;
+      }
+		}
+  }
+}	

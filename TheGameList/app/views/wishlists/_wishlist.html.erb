@@ -2,3 +2,7 @@
 <ul>
   <%= render wishlist.line_items %>
 </ul>
+
+<%= button_to 'Empty List', @wishlist, method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+

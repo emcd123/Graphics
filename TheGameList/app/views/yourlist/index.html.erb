@@ -1,2 +1,6 @@
-<h1>Yourlist#index</h1>
-<p>Find me in app/views/yourlist/index.html.erb</p>
+
+<% if @wishlist %>
+  <div id="wishlist">
+    <%= render @wishlist %>
+  </div>
+<% end %>
