@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'yourlist/index'
+
   get 'faq/index'
 
   resources :line_items

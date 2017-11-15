@@ -2,11 +2,4 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h2>Your Wishlist</h2>
-<ul>
-  <% @wishlist.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.game.title %></li>
-   <%= button_to 'Empty cart', @cart, method: :delete,
-      data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</ul>
+<%= render @wishlist %>
