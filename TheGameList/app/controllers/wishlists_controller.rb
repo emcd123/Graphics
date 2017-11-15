@@ -1,6 +1,6 @@
 class WishlistsController < ApplicationController
   before_action :set_wishlist, only: [:show, :edit, :update, :destroy]
-
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_wishlist
   # GET /wishlists
   # GET /wishlists.json
   def index
@@ -54,15 +54,20 @@ class WishlistsController < ApplicationController
   # DELETE /wishlists/1
   # DELETE /wishlists/1.json
   def destroy
-    @wishlist.destroy
+    @wishlist.destroy if @wishlist.id == session[:wishlist_id]
+    session[:wishlist_id] = nil
     respond_to do |format|
-      format.html { redirect_to wishlists_url, notice: 'Wishlist was successfully destroyed.' }
+      format.html { redirect_to homepage_url, notice: 'Wishlist is currently empty.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    def invalid_wishlist
+      logger.error "Attempt to access invalid wishlist #{params[:id]}"
+      redirect_to homepage_url, notice: 'Invalid wishlist'
+    end
+   # Use callbacks to share common setup or constraints between actions.
     def set_wishlist
       @wishlist = Wishlist.find(params[:id])
     end
